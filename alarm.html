@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Alarm</title>
+</head>
+<body>
+
+
+
+
+
+	<div  style="background-color: lightblue; color: white; font-weight: bolder; text-align: center; font-size: 30px; ">
+					
+					
+
+				<audio controls loop="" style="margin-left: 20px; margin-top: 20px">
+					<source src="beep.mp3" type="" id="alarmTone">
+				</audio>
+		<br>
+				<p>Alarm Tone</p><br>
+		<br>
+			<time datetime="">
+					<input type="time" name="" id="tym">
+			</time>
+		<br>
+				
+	
+				<button onclick="setAlarm()">Set</button><br>
+				<button onclick="snoozeAlarm()" style="display: none; margin-left: 350px; margin-top: 10px;" id="snz">Snooze</button><br>
+				<a href="alarm.html" style="display: none; margin-bottom: 10px;" id="stp"><button>Stop</button></a>			   
+	</div>
+
+	
+
+
+	<script type="text/javascript">
+		
+		setInterval(setAlarm, 4000);
+		// var c = tym.value +
+		function setAlarm(){
+			 var a = new Date;
+			 presentTime = a.getHours() + ':' + a.getMinutes();
+				 if (a.getHours() < 10) {
+			 	presentTime= "0" + presentTime;
+			 	}
+			 setTime = tym.value;
+			 
+
+			 if (presentTime == setTime) {
+			 		alert(tym.value);
+			 	snz.style.display = "block";
+			 	stp.style.display = "block";
+			 	// getElementById('alarmTone');
+			 	// display.innerHTML += alarmTone;
+			 }
+		}
+		function snoozeAlarm(){
+
+		}
+	</script>
+
+</body>
+</html>
