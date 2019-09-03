@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Alarm with multiple tone</title>
+</head>
+<body>
+		
+	
+
+		<div onload="showTime()" id="dglClock" style="color: white; font-size: 80px; font-weight: bolder; background-color: yellow; height: 100px; width: 400px; margin-left: 300px; margin-top: 100px; text-align: center;">
+		
+	    </div>
+
+
+		<div  style="background-color: lightblue; color: white; font-weight: bolder; text-align: center; font-size: 20px; width: 400px; height:100px; margin-left: 300px; margin-top: 10px;">
+										
+
+				<!-- <div style="margin-left: 20px; margin-top: 20px">
+
+					<p style="margin-top: 20px;">Alarm Tones</p><br>
+					<select id="myInput">
+						<option value="beep.mp3">Beep</option>
+						<option value="tiktok.mp3">Tic-Toc</option>
+						<option value="zunea.mp3">Zunea</option>
+					</select>
+					<button onclick="clickMe()">Select file</button>	
+					
+				</div> -->
+
+							
+				<br>
+			
+				<input type="number" id="hrs" name="">
+				<input type="number" id="mins" name="">
+			
+				<br>
+				
+				<button onclick="setAlarm()">Set</button>
+				<button onclick="snoozeAlarm()" style=" margin-top: 10px;" id="snz">Snooze</button>
+				<a href="myalarm.html" style=" margin-bottom: 10px;" id="stp"><button>Stop</button></a>			   
+				
+				
+		</div>
+
+	<script type="text/javascript">
+		var aud = new Audio ('beep.mp3');
+		var myMin;
+		var presentTime;
+		var setTime;
+		var a;
+		
+		setInterval(showTime, 1000);
+		function showTime(){
+
+			 a = new Date();
+			document.getElementById('dglClock').innerHTML =  a.getHours() + ':' + a.getMinutes() + ':' + a.getSeconds();
+			 
+			 var q = a.getSeconds();
+			 var qq = a.getMinutes();
+			 var qqq = a.getHours();
+
+
+			 if (q<10){
+			 	document.getElementById('dglClock').innerHTML = a.getHours() + ':' + a.getMinutes() + ':' + '0' + a.getSeconds();
+			 }
+
+			  if (qq<10){
+			 	document.getElementById('dglClock').innerHTML = a.getHours() + ':' + '0' + a.getMinutes() + ':' + a.getSeconds();
+			 }
+
+			  if (qqq<10){
+			 	document.getElementById('dglClock').innerHTML =  '0' + a.getHours() + ':' + a.getMinutes() + ':' + a.getSeconds();
+			 }
+
+			
+		}		
+			
+		setInterval(rep, 1000);
+		function setAlarm(){
+
+			myMin = mins.value;
+			// var a = new Date;
+
+			 // presentTime = a.getHours() + ':' + a.getMinutes();
+				//  if (a.getHours() < 10) {
+			 // 	presentTime = "0" + presentTime;
+			 // 	}
+				//  setTime = hrs.value + ':' + mins.value ; 
+
+				//  if (presentTime == setTime) {
+			 // 		aud.play();
+			 // }
+		}
+
+		function snoozeAlarm(){
+
+		myMin = Number (myMin) + 5 ;
+		aud.pause();
+	}
+
+		function rep(){
+			 a = new Date; 
+			presentTime  = a.getHours() + ':' + a.getMinutes();
+			if (a.getHours() < 10) {
+			 	presentTime = "0" + presentTime;
+			 	}
+			setTime = hrs.value + ':' + myMin ;
+			if (presentTime == setTime) {
+			 		aud.play();
+		}
+
+}
+
+		// var  aud = new Audio ('beep.mp3');
+
+			// function clickMe(){
+				
+			// 	var gg = "C:/Users/Phemie/Desktop/html/July/alarmtones" ;
+			// 	var hh = myInput.value;
+			// 	var ii = hh.lastIndexOf("\\");
+			// 	var jj = hh.slice(ii+1 , gg.length);
+			// 	var kk = gg + jj;
+
+			// 	alert(jj);
+			// }
+	</script>
+
+</body>
+</html>
