@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>player Attributes</title>
+</head>
+<body>
+
+	<div style="margin-left: 300px; margin-top: 50px; background-color: #288328; height: 600px; width: 820px;"><br>
+	
+		<div style="margin-left: 20px; width: 400px; height: 560px; border: solid white;"><br>
+			
+			<p style="margin-left: 45px; font-size: 25px; font-weight: bolder; color: white">Create a FootBaller Here</p>
+
+			<input type="" placeholder="Name" name="" style="margin-left: 100px;  width: 200px; height: 20px; border-style: none; border-radius: 7px; text-align: center;" id="entr"><br>
+			<p style="color: white; font-size: 15px; font-weight: bold; margin-left: 130px;">
+				Goal Keeper <input type="radio" name="tt" onclick="show('gk')"></p>
+			<p style="color: white; font-size: 15px; font-weight: bold; margin-left: 130px;" >
+				Central Defender <input type="radio" name="tt" onclick="show('cb')"></p> 
+			<p style="color: white; font-size: 15px; font-weight: bold; margin-left: 130px;">
+				Right Back <input type="radio" name="tt" onclick="show('rb')"></p>
+			<p style="color: white; font-size: 15px; font-weight: bold; margin-left: 130px;">
+				Left Back <input type="radio" name="tt" onclick="show('lb')"></p>
+			<p style="color: white; font-size: 15px; font-weight: bold; margin-left: 130px;">
+				Defensive Midfielder <input type="radio" name="tt" onclick="show('dmf')"></p>
+			<p style="color: white; font-size: 15px; font-weight: bold; margin-left: 130px;">
+				Central Midfielder <input type="radio" name="tt" onclick="show('cmf')"></p>
+			<p style="color: white; font-size: 15px; font-weight: bold; margin-left: 130px;">
+				Right Wing Forward <input type="radio" name="tt" onclick="show('rwf')"></p>
+			<p style="color: white; font-size: 15px; font-weight: bold; margin-left: 130px;">
+				Left Wing Forward <input type="radio" name="tt" onclick="show('lwf')"></p>
+			<p style="color: white; font-size: 15px; font-weight: bold; margin-left: 130px;">
+				Supporting Striker <input type="radio" name="tt" onclick="show('ss')"></p>
+			<p style="color: white; font-size: 15px; font-weight: bold; margin-left: 130px;">
+				Central Forward <input type="radio" name="tt" onclick="show('cf')"></p>
+	
+			<button style="margin-left: 130px; width: 120px; height: 20px; border-radius: 7px;" onclick="Create()">Create Footballer</button><br><br>
+
+			<a href="football.html"><button style="margin-left: 130px; width: 120px; height: 20px; border-radius: 7px;">Home</button></a>
+		</div>
+	
+		<div style="width: 375px; height: 560px; border: solid white; margin-left: 423px; margin-top: -566px;"><br>
+			
+			<p style="margin-left: 85px; font-size: 25px; font-weight: bolder; color: white">Footballer's Stats</p>
+
+			<div id="resultz" style="width: 315px; height: 440px; border: solid white; margin-left: 30px; margin-top: 10px; background-color: transparent; font-weight: bolder; color: white; text-align: center;" >
+			</div>		
+		</div>
+
+	</div>
+
+	<script type="text/javascript">
+			
+			var sx;
+			function show(z){
+				sx = z;
+			}
+			function Create(){
+			class Creation{
+				constructor(){
+					this.team = "PHEMIE FC";
+					this.jersey = "Lightblue";
+					this.soccerboot = "Black";
+					this.Shinguard = "Yes";
+					this.weight = "Over 60kg";
+					this.height = "Over 165cm";							
+					this.call();
+			}
+				call(){
+				return  'Team Name = ' + this.team + '<br>' +
+						'Jersey Colour = ' + this.jersey +'<br>' +
+						'Boot Colour = ' + this.soccerboot + '<br>' +
+						'Shin Guard = ' + this.Shinguard + '<br>' +
+						'Weight = ' + this.weight + '<br>' +
+						'Height = ' + this.height;				}
+			}
+			class goalKeeper extends Creation {
+					speed = "50 %" ;
+					defensiveAbility = "86 %" ;
+					response = "86%" ;
+					strongFoot = "Left" ;
+					weakFoot = "Right";
+					dribbling = "40 %" ;
+					shotPower = "40 %";
+					swerve = "40 %";
+					stamina = "45%";
+					header = "40 %";
+					passAccuracy= " 74%";
+				
+			}
+			class centreBack extends Creation{
+					speed = "80 %" ;
+					defensiveAbility = "82 %";
+					response = "81 %" ;
+					strongFoot = "Right" ;
+					weakFoot = "Left";
+					dribbling = "76 %" ;
+					shotPower = "70 %";
+					swerve = "65 %";
+					stamina = "85%";
+					header = "78 %";
+					passAccuracy= " 84%";
+				}
+			class rightBack extends Creation{
+					speed = "80 %" ;
+					defensiveAbility = "80 %" ;
+					response = "84 %" ;
+					strongFoot = "Right" ;
+					weakFoot = "Left";
+					dribbling = "70 %" ;
+					shotPower = "68 %";
+					swerve = "60 %";
+					stamina = "80%";
+					header = "81 %";
+					passAccuracy= "76%";
+				}
+			class leftBack extends Creation{
+					speed = "83 %" ;
+					defensiveAbility = "84 %" ;
+					response = "88 %" ;
+					strongFoot = "Left" ;
+					weakFoot = "Right";
+					dribbling = "77 %" ;
+					shotPower = "78 %";
+					swerve = "73 %";
+					stamina = "83 %";
+					header = "84 %";
+					passAccuracy= "86%";
+			}
+			class defensiveMidfielder extends Creation{
+					speed = "82 %" ;
+					defensiveAbility = "84 %" ;
+					response = "88 %" ;
+					strongFoot = "Left" ;
+					weakFoot = "Right";
+					dribbling = "87 %" ;
+					shotPower = "80 %";
+					swerve = "80 %";
+					stamina = "81 %";
+					header = "84 %";
+					passAccuracy= "83%";
+			}
+			class centralMidfielder extends Creation{
+					speed = "83 %" ;
+					defensiveAbility = "84 %" ;
+					response = "88 %" ;
+					strongFoot = "Left" ;
+					weakFoot = "Right";
+					dribbling = "83 %" ;
+					shotPower = "84 %";
+					swerve = "82 %";
+					stamina = "85 %";
+					header = "85 %";
+					passAccuracy= "88%";
+			}
+			class rightWingforward extends Creation{
+					speed = "85 %" ;
+					defensiveAbility = "56 %" ;
+					response = "88 %" ;
+					strongFoot = "Right" ;
+					weakFoot = "Left";
+					dribbling = "83 %" ;
+					shotPower = "84 %";
+					swerve = "87 %";
+					stamina = "86 %";
+					header = "85 %";
+					passAccuracy= "81 %";
+			}
+			class leftWingforward extends Creation{
+					speed = "89 %" ;
+					defensiveAbility = "60 %" ;
+					response = "85 %" ;
+					strongFoot = "Left" ;
+					weakFoot = "Right";
+					dribbling = "87 %" ;
+					shotPower = "86 %";
+					swerve = "90 %";
+					stamina = "83 %";
+					header = "87 %";
+					passAccuracy= "86 %";
+			}
+			class supportingStriker extends Creation{
+					speed = "89 %" ;
+					defensiveAbility = "40 %" ;
+					response = "87 %" ;
+					strongFoot = "Right" ;
+					weakFoot = "Left";
+					dribbling = "82 %" ;
+					shotPower = "84 %";
+					swerve = "85 %";
+					stamina = "87 %";
+					header = "88 %";
+					passAccuracy= "82 %";
+			}
+			class centralForward extends Creation{
+					speed = "92 %" ;
+					defensiveAbility = "40 %" ;
+					response = "90 %" ;
+					strongFoot = "Left" ;
+					weakFoot = "Right";
+					dribbling = "88 %" ;
+					shotPower = "90 %";
+					swerve = "89 %";
+					stamina = "90 %";
+					header = "90 %";
+					passAccuracy= "78 %";
+			}
+
+			if (entr.value == ''){
+				resultz.innerHTML = "";
+			}
+
+			else if ( sx == 'gk'){
+
+			var footballer = new goalKeeper;
+				footballer.name = entr.value;
+
+			
+				resultz.innerHTML = 'You created a Goal Keeper' +  '<br>' + 'Player Name = ' + footballer.name + '<br>' + footballer.call() + '<br>' + 'Speed = ' +footballer.speed + '<br>' + 'Defensive Ability = ' + footballer.defensiveAbility + '<br>' + 'Response = ' + footballer.response + '<br>' + 'Strong Foot = ' + footballer.strongFoot + '<br>' + 'Weak Foot = ' + footballer.weakFoot + '<br>' + 'Dribbling = ' + footballer.dribbling + '<br>' + 'Shot Power = ' + footballer.shotPower + '<br>' + 'Swerve = ' + footballer.swerve + '<br>' + 'Stamina = ' + footballer.stamina + '<br>' + 'Header = ' + footballer.header + '<br>' + 'Pass passAccuracy = ' + footballer.passAccuracy;
+			}
+			
+			
+
+			else if ( sx == 'cb'){
+				var footballer = new rightBack;
+				footballer.name = entr.value;
+				resultz.innerHTML = 'You created a Central Defender' +  '<br>' + 'Player Name = ' + footballer.name + '<br>' + footballer.call() + '<br>' + 'Speed = ' +footballer.speed + '<br>' + 'Defensive Ability = ' + footballer.defensiveAbility + '<br>' + 'Response = ' + footballer.response + '<br>' + 'Strong Foot = ' + footballer.strongFoot + '<br>' + 'Weak Foot = ' + footballer.weakFoot + '<br>' + 'Dribbling = ' + footballer.dribbling + '<br>' + 'Shot Power = ' + footballer.shotPower + '<br>' + 'Swerve = ' + footballer.swerve + '<br>' + 'Stamina = ' + footballer.stamina + '<br>' + 'Header = ' + footballer.header + '<br>' + 'Pass passAccuracy = ' + footballer.passAccuracy;
+			}
+
+			else if ( sx == 'rb'){
+				var footballer = new rightBack;
+				footballer.name = entr.value;
+				resultz.innerHTML = 'You created a Right Back Defender' +  '<br>' + 'Player Name = ' + footballer.name + '<br>' + footballer.call() + '<br>' + 'Speed = ' +footballer.speed + '<br>' + 'Defensive Ability = ' + footballer.defensiveAbility + '<br>' + 'Response = ' + footballer.response + '<br>' + 'Strong Foot = ' + footballer.strongFoot + '<br>' + 'Weak Foot = ' + footballer.weakFoot + '<br>' + 'Dribbling = ' + footballer.dribbling + '<br>' + 'Shot Power = ' + footballer.shotPower + '<br>' + 'Swerve = ' + footballer.swerve + '<br>' + 'Stamina = ' + footballer.stamina + '<br>' + 'Header = ' + footballer.header + '<br>' + 'Pass passAccuracy = ' + footballer.passAccuracy;
+			}
+
+			else if ( sx == 'lb'){
+				var footballer = new leftBack;
+				footballer.name = entr.value;
+				resultz.innerHTML = 'You created a Left Back Defender' +  '<br>' + 'Player Name = ' + footballer.name + '<br>' + footballer.call() + '<br>' + 'Speed = ' +footballer.speed + '<br>' + 'Defensive Ability = ' + footballer.defensiveAbility + '<br>' + 'Response = ' + footballer.response + '<br>' + 'Strong Foot = ' + footballer.strongFoot + '<br>' + 'Weak Foot = ' + footballer.weakFoot + '<br>' + 'Dribbling = ' + footballer.dribbling + '<br>' + 'Shot Power = ' + footballer.shotPower + '<br>' + 'Swerve = ' + footballer.swerve + '<br>' + 'Stamina = ' + footballer.stamina + '<br>' + 'Header = ' + footballer.header + '<br>' + 'Pass passAccuracy = ' + footballer.passAccuracy;
+			}
+
+			else if ( sx == 'dmf'){
+				var footballer = new defensiveMidfielder;
+				footballer.name = entr.value;
+				resultz.innerHTML = 'You created a Defensive Midfielder' +  '<br>' + 'Player Name = ' + footballer.name + '<br>' + footballer.call() + '<br>' + 'Speed = ' +footballer.speed + '<br>' + 'Defensive Ability = ' + footballer.defensiveAbility + '<br>' + 'Response = ' + footballer.response + '<br>' + 'Strong Foot = ' + footballer.strongFoot + '<br>' + 'Weak Foot = ' + footballer.weakFoot + '<br>' + 'Dribbling = ' + footballer.dribbling + '<br>' + 'Shot Power = ' + footballer.shotPower + '<br>' + 'Swerve = ' + footballer.swerve + '<br>' + 'Stamina = ' + footballer.stamina + '<br>' + 'Header = ' + footballer.header + '<br>' + 'Pass passAccuracy = ' + footballer.passAccuracy;
+			}
+
+			else if ( sx == 'cmf'){
+				var footballer = new centralMidfielder;
+				footballer.name = entr.value;
+				resultz.innerHTML = 'You created a Central Midfielder' +  '<br>' + 'Player Name = ' + footballer.name + '<br>' + footballer.call() + '<br>' + 'Speed = ' +footballer.speed + '<br>' + 'Defensive Ability = ' + footballer.defensiveAbility + '<br>' + 'Response = ' + footballer.response + '<br>' + 'Strong Foot = ' + footballer.strongFoot + '<br>' + 'Weak Foot = ' + footballer.weakFoot + '<br>' + 'Dribbling = ' + footballer.dribbling + '<br>' + 'Shot Power = ' + footballer.shotPower + '<br>' + 'Swerve = ' + footballer.swerve + '<br>' + 'Stamina = ' + footballer.stamina + '<br>' + 'Header = ' + footballer.header + '<br>' + 'Pass passAccuracy = ' + footballer.passAccuracy;
+			}
+
+			else if ( sx == 'rwf'){
+				var footballer = new rightWingforward;
+				footballer.name = entr.value;
+				resultz.innerHTML = 'You created a Right Wing Forward' +  '<br>' + 'Player Name = ' + footballer.name + '<br>' + footballer.call() + '<br>' + 'Speed = ' +footballer.speed + '<br>' + 'Defensive Ability = ' + footballer.defensiveAbility + '<br>' + 'Response = ' + footballer.response + '<br>' + 'Strong Foot = ' + footballer.strongFoot + '<br>' + 'Weak Foot = ' + footballer.weakFoot + '<br>' + 'Dribbling = ' + footballer.dribbling + '<br>' + 'Shot Power = ' + footballer.shotPower + '<br>' + 'Swerve = ' + footballer.swerve + '<br>' + 'Stamina = ' + footballer.stamina + '<br>' + 'Header = ' + footballer.header + '<br>' + 'Pass passAccuracy = ' + footballer.passAccuracy;
+			}
+
+			else if ( sx == 'lwf'){
+				var footballer = new leftWingforward;
+				footballer.name = entr.value;
+				resultz.innerHTML = 'You created a Left Wing Forward' +  '<br>' + 'Player Name = ' + footballer.name + '<br>' + footballer.call() + '<br>' + 'Speed = ' +footballer.speed + '<br>' + 'Defensive Ability = ' + footballer.defensiveAbility + '<br>' + 'Response = ' + footballer.response + '<br>' + 'Strong Foot = ' + footballer.strongFoot + '<br>' + 'Weak Foot = ' + footballer.weakFoot + '<br>' + 'Dribbling = ' + footballer.dribbling + '<br>' + 'Shot Power = ' + footballer.shotPower + '<br>' + 'Swerve = ' + footballer.swerve + '<br>' + 'Stamina = ' + footballer.stamina + '<br>' + 'Header = ' + footballer.header + '<br>' + 'Pass passAccuracy = ' + footballer.passAccuracy;
+			}
+
+			else if ( sx == 'ss'){
+				var footballer = new supportingStriker;
+				footballer.name = entr.value;
+				resultz.innerHTML = 'You created a Supporting Striker' +  '<br>' + 'Player Name = ' + footballer.name + '<br>' + footballer.call() + '<br>' + 'Speed = ' +footballer.speed + '<br>' + 'Defensive Ability = ' + footballer.defensiveAbility + '<br>' + 'Response = ' + footballer.response + '<br>' + 'Strong Foot = ' + footballer.strongFoot + '<br>' + 'Weak Foot = ' + footballer.weakFoot + '<br>' + 'Dribbling = ' + footballer.dribbling + '<br>' + 'Shot Power = ' + footballer.shotPower + '<br>' + 'Swerve = ' + footballer.swerve + '<br>' + 'Stamina = ' + footballer.stamina + '<br>' + 'Header = ' + footballer.header + '<br>' + 'Pass passAccuracy = ' + footballer.passAccuracy;
+			}
+
+			else if ( sx == 'cf'){
+				var footballer = new centralForward;
+				footballer.name = entr.value;
+				resultz.innerHTML = 'You created a Central Forward' +  '<br>' + 'Player Name = ' + footballer.name + '<br>' + footballer.call() + '<br>' + 'Speed = ' +footballer.speed + '<br>' + 'Defensive Ability = ' + footballer.defensiveAbility + '<br>' + 'Response = ' + footballer.response + '<br>' + 'Strong Foot = ' + footballer.strongFoot + '<br>' + 'Weak Foot = ' + footballer.weakFoot + '<br>' + 'Dribbling = ' + footballer.dribbling + '<br>' + 'Shot Power = ' + footballer.shotPower + '<br>' + 'Swerve = ' + footballer.swerve + '<br>' + 'Stamina = ' + footballer.stamina + '<br>' + 'Header = ' + footballer.header + '<br>' + 'Pass passAccuracy = ' + footballer.passAccuracy;
+			}
+
+			
+
+}
+			
+		</script>
+
+</body>
+</html>
